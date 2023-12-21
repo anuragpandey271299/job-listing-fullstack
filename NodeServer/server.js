@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose=require('mongoose')
 const dotenv=require('dotenv').config()
+const customer = require('./models/customer')
 
 const app= express()
 
