@@ -1,0 +1,34 @@
+.registerContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.registerContainer img{
+    height: 100vh;
+}
+.registerContainer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    margin: 0 200px;
+}
+.registerContainer input{
+    padding: 0 15px;
+    height: 50px;
+}
+.registerContainer button{
+    background-color: #ED5353;
+    border: none;
+    font-size: 25px;
+    color: white;
+    height: 50px;
+}
+.registerContainer .login{
+    display: flex;
+    gap: 10px;
+}
+
+.registerContainer .checkbox{
+    display: flex;
+    align-items: center;
+}
