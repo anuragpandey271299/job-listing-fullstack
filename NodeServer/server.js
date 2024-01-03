@@ -5,6 +5,10 @@ const customer = require('./models/customer')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const registeration=require('./routes/registeration')
+const job=require('./models/job')
+const addjob = require('./routes/addJob')
+const authenticate=require('./routes/authenticate')
+
 
 const app= express()
 
@@ -20,6 +24,10 @@ app.get('/health',(req,res)=>{
 })
 
 app.use('/',registeration)
+app.use('/',addjob)
+app.use('/',authenticate)
+
+
 
 app.listen(process.env.PORT,()=>{
     mongoose.connect(process.env.MONGODB_URL)
