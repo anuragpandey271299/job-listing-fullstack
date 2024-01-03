@@ -1,0 +1,18 @@
+.headerContainer, .headerContainer .groupInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px
+}
+.headerContainer{
+    background-color: #ED5353;
+    padding: 20px;
+    color: white;
+}
+.headerContainer .groupInfo button{
+    background-color: #ED5353;
+    border: 2px solid white;
+    font-size: 25px;
+    color: white;
+    padding: 10px;
+}

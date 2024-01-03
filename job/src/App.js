@@ -1,10 +1,10 @@
-// App.js
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './Components/Register';
 import { PrivateRoute } from './Components/PrivateRoute'
 import AddJob from './Pages/AddJobPage/AddJob';
+import JobFinder from './Pages/JobFinder/JobFinder';
 
 function App() {
 
@@ -23,7 +23,10 @@ function App() {
           path="/addjob"
           element={<PrivateRoute Cmp={AddJob}/>}
         />
-        {/* Other routes */}
+        <Route
+          path='/jobfinder'
+          element={<JobFinder />}
+        />
       </Routes>
     </Router>
   );

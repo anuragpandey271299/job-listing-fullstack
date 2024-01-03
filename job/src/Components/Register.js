@@ -68,6 +68,7 @@ export default function Register({forLogin}) {
         console.log(response.data);
         if(response.status===200){
           toast('Loggen in successfully')
+          
           localStorage.setItem('jwtoken',response.data.jwtoken)
           navigate('/addjob')
         }

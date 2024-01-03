@@ -26,6 +26,7 @@ export default function AddJob() {
         }
         try{
             const jwtoken = localStorage.getItem('jwtoken');
+            
             const config = {
               headers: {
                 'Authorization': jwtoken,
