@@ -8,6 +8,7 @@ const registeration=require('./routes/registeration')
 const job=require('./models/job')
 const addjob = require('./routes/addJob')
 const authenticate=require('./routes/authenticate')
+const mydata=require('./routes/mydata')
 
 
 const app= express()
@@ -26,6 +27,7 @@ app.get('/health',(req,res)=>{
 app.use('/',registeration)
 app.use('/',addjob)
 app.use('/',authenticate)
+app.use('/',mydata)
 
 
 

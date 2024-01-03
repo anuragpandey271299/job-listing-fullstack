@@ -6,8 +6,9 @@ const router=express.Router()
 
 router.post('/addjob',authMiddleware, async (req,res)=>{
     try{
+        const USERID=req.user._id
         const {companyName,companyLogo,jobPosition,salary,jobType,officeType,location,jobDescription,aboutCompany,skills,info}=req.body
-        const newJob = await job.create({companyName,companyLogo,jobPosition,salary,jobType,officeType,location,jobDescription,aboutCompany,skills,info})
+        const newJob = await job.create({USERID,companyName,companyLogo,jobPosition,salary,jobType,officeType,location,jobDescription,aboutCompany,skills,info})
         res.json(newJob)
     }catch(error){
         console.error(error);

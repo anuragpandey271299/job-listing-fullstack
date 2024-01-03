@@ -1,6 +1,10 @@
 const mongoose=require('mongoose')
 
 const jobSchema = new mongoose.Schema({
+    USERID:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true
+    },
     companyName:{
         type:String,
         required:true
