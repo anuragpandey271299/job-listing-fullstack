@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.AddJobContainer .form-group label {
+    width: 250px;
+}
+
+.AddJobContainer form {
+    width: 600px;
+    margin-left: 15vw;
+    margin-top: 20px;
+}
+
+.AddJobContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.AddJobContainer .form-group input,
+.AddJobContainer .form-group select,
+.AddJobContainer .form-group textarea {
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.AddJobContainer img {
+    height: 100vh;
+}
+
+.AddJobContainer textarea {
+    resize: none;
+}
+
+.AddJobContainer .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AddJobContainer button {
+    background-color: #ED5353;
+    border: none;
+    font-size: 25px;
+    color: white;
+    height: 50px;
+
+}
+
+.AddJobContainer form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+button{
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
