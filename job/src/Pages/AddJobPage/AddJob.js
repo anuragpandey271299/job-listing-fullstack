@@ -86,6 +86,10 @@ export default function AddJob({ forUpdate }) {
 
   }
 
+  const handleCancel=()=>{
+    navigate('/jobfinder')
+  }
+
   return (
     <div className='AddJobContainer'>
       <form onSubmit={handleSubmit}>
@@ -158,7 +162,10 @@ export default function AddJob({ forUpdate }) {
           <label>Information</label>
           <input value={info} onChange={(e) => setInfo(e.target.value)} placeholder="Enter the additional information" />
         </div>
+        <div className='buttons'>
         <button type="submit">{forUpdate ? 'Update' : '+ Add Job'}</button>
+        <button onClick={handleCancel}>Cancel</button>
+        </div>
       </form>
       <ToastContainer position='top-center' />
       <img src={img2} alt='img2' />

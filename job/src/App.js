@@ -6,6 +6,8 @@ import { PrivateRoute } from './Components/PrivateRoute'
 import AddJob from './Pages/AddJobPage/AddJob';
 import JobFinder from './Pages/JobFinder/JobFinder';
 import UpdateJob from './Pages/UpdateJobPage/UpdateJob';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -33,6 +35,7 @@ function App() {
           element={<PrivateRoute Cmp={UpdateJob} />}
         />
       </Routes>
+      <ToastContainer position='top-center' />
     </Router>
   );
 }

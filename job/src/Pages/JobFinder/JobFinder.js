@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../Components/Header';
 import JobData from '../../Components/JobData';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function JobFinder() {
   const [name, setName] = useState('');
@@ -41,6 +43,19 @@ function JobFinder() {
     }
   }
 
+  const deleteJob=async(USERID)=>{
+    const jwtoken = localStorage.getItem('jwtoken');
+      const config = {
+        headers: {
+          'Authorization': jwtoken,
+          'Content-Type': 'application/json',
+        },
+      };
+      await axios.delete(`http://localhost:5000/delete/${USERID}`, config);
+      fetchJobData()
+      toast('Job deleted')
+  }
+
   useEffect(() => {
     fetchUserData();
     fetchJobData();
@@ -61,8 +76,10 @@ function JobFinder() {
           skills={job.skills.flat()[0].split(',').map(skill => skill.trim())}
           companyLogo={job.companyLogo}
           USERID={job._id}
+          onDelete={deleteJob}
         />
       ))}
+      <ToastContainer position='top-center' />
     </>
   );
 }

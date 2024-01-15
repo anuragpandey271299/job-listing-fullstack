@@ -6,6 +6,13 @@
 .AddJobContainer .form-group label {
     width: 250px;
 }
+.AddJobContainer .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.AddJobContainer button{
+  width: 42%;
+}
 
 .AddJobContainer form {
     width: 600px;
