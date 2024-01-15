@@ -11,6 +11,7 @@ const authenticate=require('./routes/authenticate')
 const mydata=require('./routes/mydata')
 const myjob=require('./routes/myjob')
 const updatedJob=require('./routes/updateJobAPI')
+const deletedJob=require('./routes/deleteJobAPI')
 
 
 const app= express()
@@ -32,7 +33,7 @@ app.use('/',authenticate)
 app.use('/',mydata)
 app.use('/',myjob)
 app.use('/',updatedJob)
-
+app.use('/',deletedJob)
 
 
 app.listen(process.env.PORT,()=>{
