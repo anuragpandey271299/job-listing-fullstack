@@ -2,6 +2,7 @@ const express=require('express')
 const job = require('../models/job')
 const authMiddleware = require('../middleware/authMiddleware')
 
+
 const router=express.Router()
 
 router.post('/addjob',authMiddleware, async (req,res)=>{

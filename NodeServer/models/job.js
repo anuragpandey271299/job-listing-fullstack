@@ -15,7 +15,7 @@ const jobSchema = new mongoose.Schema({
     },
     jobPosition:{
         type:String,
-        enum: ['senior', 'junior'],
+        enum: ['Senior', 'Junior'],
         required:true
     },
     salary:{
@@ -24,12 +24,12 @@ const jobSchema = new mongoose.Schema({
     },
     jobType:{
         type:String,
-        enum:['frontend','backend','fullstack'],
+        enum:['Frontend','Backend','Fullstack'],
         required:true
     },
     officeType:{
         type:String,
-        enum:['remote','office','hybrid'],
+        enum:['Remote','Office','Hybrid'],
         required:true
     },
     location:{
