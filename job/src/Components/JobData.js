@@ -2,9 +2,15 @@ import React from 'react'
 import group from './images/group.png'
 import indiaFlag from './images/indiaFlag.png'
 import './JobData.css'
+import { useNavigate } from 'react-router-dom'
 
-export default function JobData({ companyName, jobType, salary, location, officeType, jobPosition, skills,companyLogo}) {
-
+export default function JobData({ companyName, jobType, salary, location, officeType, jobPosition, skills,companyLogo,USERID}) {
+  const navigate=useNavigate()
+  const handleEdit=(USERID)=>{
+    alert(USERID)
+    localStorage.setItem('USERID', USERID);
+    navigate('/updatejob')
+  }
   return (
     <>
       <div className='jobContainer'>
@@ -39,7 +45,10 @@ export default function JobData({ companyName, jobType, salary, location, office
               <div key={index} className='skills'>{skill}</div>
             ))}
           </div>
-          <button>View details</button>
+
+          <button onClick={()=>handleEdit(USERID)}>Edit</button>
+
+
         </div>
 
       </div>

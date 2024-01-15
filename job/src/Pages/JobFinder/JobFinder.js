@@ -60,6 +60,7 @@ function JobFinder() {
           jobPosition={job.jobPosition}
           skills={job.skills.flat()[0].split(',').map(skill => skill.trim())}
           companyLogo={job.companyLogo}
+          USERID={job._id}
         />
       ))}
     </>

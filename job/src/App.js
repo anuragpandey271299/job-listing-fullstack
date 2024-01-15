@@ -5,6 +5,7 @@ import Register from './Components/Register';
 import { PrivateRoute } from './Components/PrivateRoute'
 import AddJob from './Pages/AddJobPage/AddJob';
 import JobFinder from './Pages/JobFinder/JobFinder';
+import UpdateJob from './Pages/UpdateJobPage/UpdateJob';
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
         <Route
           path='/jobfinder'
           element={<PrivateRoute Cmp={JobFinder} />}
+        />
+        <Route
+          path='/updatejob'
+          element={<PrivateRoute Cmp={UpdateJob} />}
         />
       </Routes>
     </Router>
