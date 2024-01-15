@@ -4,6 +4,8 @@ import img2 from '../../Components/images/img2.png'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function AddJob() {
 
@@ -18,6 +20,8 @@ export default function AddJob() {
     const [aboutCompany, setAboutCompany]=useState('')
     const [skills, setSkills]=useState('')
     const [info, setInfo]=useState('')
+
+    const navigate=useNavigate()
 
     const handleSubmit= async (e)=>{
         e.preventDefault()
@@ -37,6 +41,7 @@ export default function AddJob() {
             console.log(response.data)
             if(response.status===200){
                 toast('Job posted')
+                navigate('/jobfinder')
             }
         }catch(error){
             console.log(error)
@@ -61,8 +66,8 @@ export default function AddJob() {
         <label>Job position</label>
         <select value={jobPosition} onChange={(e)=>setJobPosition(e.target.value)}>
           <option value="">Select</option>
-          <option value="senior">Senior</option>
-          <option value="junior">Junior</option>
+          <option value="Senior">Senior</option>
+          <option value="Junior">Junior</option>
         </select>
       </div>
 
@@ -75,9 +80,9 @@ export default function AddJob() {
         <label>Job Type</label>
         <select value={jobType} onChange={(e)=>setJobType(e.target.value)}>
           <option value="">Select</option>
-          <option value="frontend">Frontend</option>
-          <option value="backend">Backend</option>
-          <option value="fullstack">Fullstack</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Fullstack">Fullstack</option>
         </select>
       </div>
       
@@ -85,9 +90,9 @@ export default function AddJob() {
         <label>Remote/office</label>
         <select value={officeType} onChange={(e)=>setOfficeType(e.target.value)} >
           <option value="">Select</option>
-          <option value="remote">Remote</option>
-          <option value="office">office</option>
-          <option value="hybrid">Hybrid</option>
+          <option value="Remote">Remote</option>
+          <option value="Office">Office</option>
+          <option value="Hybrid">Hybrid</option>
         </select>
         </div>
 

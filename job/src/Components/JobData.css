@@ -1,0 +1,66 @@
+.jobContainer{
+    display: flex;
+    background-color:antiquewhite;
+    justify-content: space-between;
+    border: 3px solid salmon;
+    margin: 10px 200px;
+    padding: 10px;
+}
+.leftParent{
+    display: flex;
+}
+.jobContainer .leftSide{
+    width: 25vw;
+}
+.jobContainer .imgGroup, .imgGroup .emp{
+    display: flex;
+}
+.jobContainer .emp{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap:10px
+}
+.jobContainer .emp span{
+    color: #ED5353;
+}
+.jobContainer .skills{
+    border: 2px solid #FFB6C1;
+    border-radius: 10px;
+    width:auto;
+    padding: 10px;
+    color: #ED5353;
+    font-size: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.jobContainer .skillBox{
+    display: flex;
+    justify-content: flex-end;
+}
+.jobContainer .btm{
+    color: #ED5353;
+    margin-left: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+#companyLogo{
+    height: 50px;
+    width: 50px;
+}
+.jobContainer .rightSide{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.jobContainer .rightSide button{
+    background-color: #ED5353;
+    border: 2px solid white;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}

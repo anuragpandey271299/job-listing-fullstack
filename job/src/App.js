@@ -25,7 +25,7 @@ function App() {
         />
         <Route
           path='/jobfinder'
-          element={<JobFinder />}
+          element={<PrivateRoute Cmp={JobFinder} />}
         />
       </Routes>
     </Router>
