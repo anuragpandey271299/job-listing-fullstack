@@ -10,6 +10,7 @@ const addjob = require('./routes/addJob')
 const authenticate=require('./routes/authenticate')
 const mydata=require('./routes/mydata')
 const myjob=require('./routes/myjob')
+const updatedJob=require('./routes/updateJobAPI')
 
 
 const app= express()
@@ -30,6 +31,7 @@ app.use('/',addjob)
 app.use('/',authenticate)
 app.use('/',mydata)
 app.use('/',myjob)
+app.use('/',updatedJob)
 
 
 
